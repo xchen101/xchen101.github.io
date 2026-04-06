@@ -11,3 +11,8 @@ github_username: xchen101
 linkedin_username: xiaolichen
 instagram_username: 137ragnarok
 bluesky_username: xiaolichen.bsky.social
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/

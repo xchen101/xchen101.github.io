@@ -14,7 +14,7 @@ layout: default
   <span class="section-label">Recent Posts</span>
   <div class="section-rule"></div>
 
-  {% for post in site.posts %}
+  {% for post in site.posts limit:5 %}
   <article class="post-entry">
     <div class="post-text">
       <span class="post-date">{{ post.date | date: "%B %-d, %Y" }}</span>
@@ -29,4 +29,10 @@ layout: default
   </article>
   {% unless forloop.last %}<div class="post-rule"></div>{% endunless %}
   {% endfor %}
+
+  {% if site.posts.size > 5 %}
+  <div class="older-posts">
+    <a href="{{ '/blog/' | relative_url }}" class="older-posts-link">Older posts &rarr;</a>
+  </div>
+  {% endif %}
 </section>
