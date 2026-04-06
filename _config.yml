@@ -1,1 +1,20 @@
-theme: jekyll-theme-minimal
+title: Xiaoli Chen
+description: Personal blog and projects
+url: "https://xchen101.github.io"
+
+theme: minima
+
+minima:
+  skin: dark
+
+header_pages:
+  - about.md
+  - projects.md
+
+author:
+  name: Xiaoli Chen
+
+github_username: xchen101
+linkedin_username: xiaolichen
+instagram_username: 137ragnarok
+bluesky_username: xiaolichen.bsky.social
