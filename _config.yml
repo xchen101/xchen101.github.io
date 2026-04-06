@@ -4,13 +4,6 @@ url: "https://xchen101.github.io"
 
 theme: minima
 
-minima:
-  skin: dark
-
-header_pages:
-  - about.md
-  - projects.md
-
 author:
   name: Xiaoli Chen
 
