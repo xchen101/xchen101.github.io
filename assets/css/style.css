@@ -506,17 +506,6 @@ img { max-width: 100%; height: auto; display: block; }
   object-fit: cover;
   filter: saturate(0.75) brightness(0.85);
 }
-.hero-photo-meta {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 11px;
-  font-weight: 400;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: #C8C8C8;
-}
 .hero-text {
   display: flex;
   flex-direction: column;
