@@ -26,12 +26,13 @@ permalink: /blog/
   </header>
 
   {% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+  {% assign current_year = site.time | date: '%Y' %}
   {% for year in posts_by_year %}
   <div class="blog-year-group">
     <div class="year-divider">
       <div class="year-marker">{{ year.name }}</div>
       <div class="year-meta">
-        <div class="year-label">{% if year.name == site.time | date: '%Y' %}This year{% else %}Archive{% endif %}</div>
+        <div class="year-label">{% if year.name == current_year %}This year{% else %}Archive{% endif %}</div>
         <div class="year-range">{{ year.items | size }} entries</div>
       </div>
     </div>
