@@ -1,0 +1,67 @@
+{% assign reading = site.data.now.reading %}
+{% assign watching = site.data.now.watching %}
+{% assign listening = site.data.now.listening %}
+
+<div class="section-head section-head-compact">
+  <div class="section-head-title">
+    <div class="section-eyebrow">— 07 / Right now</div>
+    <h2 class="section-title section-title-sm">Reading, watching, listening</h2>
+  </div>
+  <p class="section-intro section-intro-sm"><em>Live widgets — what's on the nightstand, the screen, and in the headphones this week.</em></p>
+</div>
+
+<div class="now-grid">
+  <a class="now-card" href="{{ reading.profile_url }}" target="_blank" rel="noopener">
+    <div class="now-media now-media-portrait" style="background:linear-gradient(135deg,#5C4A3A,#2A221B);">
+      <span class="now-media-label">{{ reading.title }}</span>
+    </div>
+    <div class="now-body">
+      <div class="now-service"><span class="now-dot" style="background:{{ reading.accent }};"></span>{{ reading.service }} · {{ reading.label }}</div>
+      <h3 class="now-title">{{ reading.title }}</h3>
+      <div class="now-meta">{{ reading.author }}</div>
+      <div class="now-progress">
+        <div class="now-progress-bar"><span style="width:{{ reading.progress_percent }}%; background:{{ reading.accent }};"></span></div>
+        <div class="now-progress-labels">
+          <span>{{ reading.progress_label }}</span>
+          <span>{{ reading.progress_percent }}%</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a class="now-card" href="{{ watching.profile_url }}" target="_blank" rel="noopener">
+    <div class="now-media now-media-portrait" style="background:linear-gradient(135deg,#3A4A5C,#151E2A);">
+      <span class="now-media-label">{{ watching.title }}</span>
+    </div>
+    <div class="now-body">
+      <div class="now-service"><span class="now-dot" style="background:{{ watching.accent }};"></span>{{ watching.service }} · {{ watching.label }}</div>
+      <h3 class="now-title">{{ watching.title }}</h3>
+      <div class="now-meta">{{ watching.director }}</div>
+      <div class="now-rating">
+        {% assign full_stars = watching.rating | floor %}
+        {% assign has_half = watching.rating | minus: full_stars %}
+        {% for i in (1..full_stars) %}<span class="star">★</span>{% endfor %}
+        {% if has_half > 0 %}<span class="star">½</span>{% endif %}
+      </div>
+      <div class="now-meta-muted">{{ watching.watched }}</div>
+    </div>
+  </a>
+
+  <a class="now-card" href="{{ listening.profile_url }}" target="_blank" rel="noopener">
+    <div class="now-media now-media-square" style="background:linear-gradient(135deg,#4A3A5C,#1F1528);">
+      <span class="now-play-glyph"></span>
+    </div>
+    <div class="now-body">
+      <div class="now-service"><span class="now-dot" style="background:{{ listening.accent }};"></span>{{ listening.service }} · {{ listening.label }}</div>
+      <h3 class="now-title">{{ listening.title }}</h3>
+      <div class="now-meta">{{ listening.artist }}</div>
+      <div class="now-progress">
+        <div class="now-progress-bar"><span style="width:{{ listening.progress_percent }}%; background:{{ listening.accent }};"></span></div>
+        <div class="now-progress-labels">
+          <span>{{ listening.progress_label }}</span>
+          <span>{{ listening.progress_percent }}%</span>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

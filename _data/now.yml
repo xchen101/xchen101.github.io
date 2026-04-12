@@ -1,0 +1,36 @@
+# "Right now" widgets — reading, watching, listening.
+# These are curated manually. Update whenever taste changes.
+# Could later be wired up to live APIs:
+#   - Goodreads: RSS at goodreads.com/review/list_rss/:user_id
+#   - Letterboxd: RSS at letterboxd.com/:user/rss/
+#   - Spotify: requires OAuth, so either a serverless proxy or manual update
+
+reading:
+  service: "Goodreads"
+  accent: "#B59B6E"
+  label: "Currently reading"
+  title: "There Is No Antimemetics Division"
+  author: "qntm"
+  progress_percent: 40
+  progress_label: "page 82 / 222"
+  profile_url: "https://www.goodreads.com/user/show/12162109-xiaoli"
+
+watching:
+  service: "Letterboxd"
+  accent: "#7A95B5"
+  label: "Last watched"
+  title: "The Drama"
+  director: "Borgli · 2026"
+  rating: 4.0
+  watched: "Watched recently"
+  profile_url: "https://letterboxd.com/soyoungsogone/"
+
+listening:
+  service: "Spotify"
+  accent: "#1DB954"
+  label: "On rotation"
+  title: "Kind Of Blue (Legacy Edition)"
+  artist: "Miles Davis"
+  progress_percent: 35
+  progress_label: "Track 3 of 10"
+  profile_url: "https://open.spotify.com/user/1245805109"

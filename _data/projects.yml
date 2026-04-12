@@ -1,0 +1,38 @@
+# Curated project list — rendered server-side as a baseline.
+# assets/js/main.js may enhance these with live GitHub stats (stars, last updated)
+# by calling api.github.com/repos/:owner/:repo for each entry.
+
+- name: "the-turing-way"
+  owner: "the-turing-way"
+  description: "A community-led, open-source guide to reproducible, ethical, collaborative, and inclusive data science. Contributor and reviewer."
+  language: "Markdown"
+  language_color: "#083fa1"
+  url: "https://github.com/the-turing-way/the-turing-way"
+
+- name: "research-taste-profiler"
+  owner: "xchen101"
+  description: "A small tool for mapping research interests and reading taste across disciplines — early prototype."
+  language: "Python"
+  language_color: "#3572A5"
+  url: "https://github.com/xchen101/research-taste-profiler"
+
+- name: "impulse-app-site"
+  owner: "xchen101"
+  description: "Marketing site for Impulse — an app for curbing impulses. Static site built with lightweight tooling."
+  language: "HTML"
+  language_color: "#e34c26"
+  url: "https://github.com/xchen101/impulse-app-site"
+
+- name: "reproducibility-checker"
+  owner: "xchen101"
+  description: "A checklist-driven tool for evaluating whether a research project meets basic reproducibility criteria."
+  language: "Python"
+  language_color: "#3572A5"
+  url: "https://github.com/xchen101/reproducibility-checker"
+
+- name: "xchen101.github.io"
+  owner: "xchen101"
+  description: "This website — a Jekyll-based personal portfolio and blog. Built with a custom theme and minimal plugins for fast load times and easy maintenance."
+  language: "SCSS"
+  language_color: "#c6538c"
+  url: "https://github.com/xchen101/xchen101.github.io"

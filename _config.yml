@@ -1,16 +1,36 @@
 title: Xiaoli Chen
-description: Personal blog and projects
+description: Project Lead at DataCite — open science infrastructure, persistent identifiers, and community engagement.
 url: "https://xchen101.github.io"
 
 theme: minima
 
 author:
   name: Xiaoli Chen
+  role: "Project Lead, DataCite"
+  location: "Edinburgh, UK"
+  email: zoe.chen.xiaoli@gmail.com
 
+# Identity & scholarly profiles
+orcid: "0000-0003-0207-2705"
+datacite_commons: "https://commons.datacite.org/orcid.org/0000-0003-0207-2705"
+
+# Social handles
 github_username: xchen101
 linkedin_username: xiaolichen
 instagram_username: 137ragnarok
 bluesky_username: xiaolichen.bsky.social
+
+# Writing platforms
+substack_url: "https://substack.com/@proletarianlibrarian"
+xiaohongshu_url: "https://www.xiaohongshu.com/user/profile/61ad470b000000001000b515"
+
+# "Now" widget profiles
+spotify_user_id: "1245805109"
+spotify_profile_url: "https://open.spotify.com/user/1245805109"
+letterboxd_username: "soyoungsogone"
+letterboxd_profile_url: "https://letterboxd.com/soyoungsogone/"
+goodreads_user_id: "12162109-xiaoli"
+goodreads_profile_url: "https://www.goodreads.com/user/show/12162109-xiaoli"
 
 collections:
   projects:

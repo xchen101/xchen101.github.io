@@ -1,0 +1,20 @@
+<div class="section-head">
+  <div class="section-head-title">
+    <div class="section-eyebrow">— 05 / Scholarship</div>
+    <h2 class="section-title">Selected publications</h2>
+  </div>
+  <a class="section-link" href="https://orcid.org/{{ site.orcid }}">Full list on ORCID →</a>
+</div>
+
+<div class="publications-list">
+  {% for pub in site.data.publications %}
+  <a class="publication-row" href="{{ pub.url }}" target="_blank" rel="noopener">
+    <div class="publication-year">{{ pub.year }}</div>
+    <div class="publication-main">
+      <h3 class="publication-title">{{ pub.title }}</h3>
+      <div class="publication-meta">{{ pub.authors }} · {{ pub.venue }} · doi.org/{{ pub.doi }}</div>
+    </div>
+    <div class="publication-type">{{ pub.type }}</div>
+  </a>
+  {% endfor %}
+</div>

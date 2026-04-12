@@ -1,0 +1,31 @@
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-cta">
+      <h2 class="footer-heading">Working on something<br>in open science?</h2>
+      <p class="footer-blurb">I'm open to conversations about open science strategy, PID &amp; metadata work, research-policy interfaces, and bilingual community engagement.</p>
+      <a class="footer-email" href="mailto:{{ site.author.email }}">{{ site.author.email }} →</a>
+    </div>
+
+    <div class="footer-columns">
+      <div class="footer-col">
+        <div class="footer-col-label">Elsewhere</div>
+        <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+        <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">LinkedIn</a>
+        <a href="https://bsky.app/profile/{{ site.bluesky_username }}">Bluesky</a>
+        <a href="https://www.instagram.com/{{ site.instagram_username }}">Instagram</a>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-label">Scholarly</div>
+        <a href="https://orcid.org/{{ site.orcid }}">ORCID</a>
+        <a href="{{ site.datacite_commons }}">DataCite Commons</a>
+        <a href="{{ site.substack_url }}">Substack · EN</a>
+        <a href="{{ site.xiaohongshu_url }}">Xiaohongshu · 中文</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-base">
+    <span class="copyright">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} · {{ site.author.location }} · Built with Jekyll</span>
+    <a href="#top" class="back-to-top">↑ Back to top</a>
+  </div>
+</footer>
