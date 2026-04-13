@@ -32,6 +32,10 @@ letterboxd_profile_url: "https://letterboxd.com/soyoungsogone/"
 goodreads_user_id: "12162109-xiaoli"
 goodreads_profile_url: "https://www.goodreads.com/user/show/12162109-xiaoli"
 
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
 collections:
   projects:
     output: true

@@ -5,7 +5,7 @@ permalink: /about/
 ---
 
 <div class="about-split">
-  <img src="{{ '/img/DSC_8740.JPG' | relative_url }}" alt="Xiaoli" class="about-photo">
+  <img src="{{ '/img/DSC_8740.JPG' | relative_url }}" alt="Xiaoli Chen" class="about-photo" loading="lazy">
   <div class="about-text">
     <h1>About</h1>
     <p>I'm Xiaoli — a developer and photographer based in the UK. I spend my days writing code and my evenings chasing light through city streets.</p>
