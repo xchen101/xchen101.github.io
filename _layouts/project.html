@@ -15,7 +15,7 @@ layout: default
     {% endif %}
   </header>
   {% if page.image %}
-  <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="post-hero-img">
+  <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="post-hero-img" loading="lazy">
   {% endif %}
   <div class="post-body">
     {{ content }}
