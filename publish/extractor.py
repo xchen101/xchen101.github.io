@@ -29,7 +29,7 @@ def extract(note_name: str, config: dict) -> dict:
     raw = note_path.read_text(encoding="utf-8")
     frontmatter, body = _split_frontmatter(raw)
 
-    title = _resolve_title(frontmatter, note_name)
+    title = _resolve_title(frontmatter, note_name, body)
     tags = _resolve_tags(frontmatter)
     note_date = _resolve_date(frontmatter, note_path)
     content = _clean_obsidian_syntax(body)
@@ -101,11 +101,16 @@ def _parse_frontmatter_simple(text: str) -> dict:
     return result
 
 
-def _resolve_title(fm: dict, note_name: str) -> str:
+_H1_RE = re.compile(r"^#\s+(.+?)\s*#*\s*$", re.MULTILINE)
+
+
+def _resolve_title(fm: dict, note_name: str, body: str) -> str:
     title = fm.get("title")
     if title:
         return str(title).strip()
-    # kebab-case → Title Case
+    h1 = _H1_RE.search(body)
+    if h1:
+        return h1.group(1).strip()
     return note_name.replace("-", " ").replace("_", " ").strip().title()
 
 

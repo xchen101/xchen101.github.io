@@ -83,12 +83,6 @@ model: {{model}}
 
 <post>
 (the rewritten blog post in markdown)
-
----
-
-*This post was rewritten from a note using {{model}}. The prompt used:*
-
-> {{user_prompt_verbatim}}
 </post>
 
 <notes>
@@ -103,6 +97,6 @@ model: {{model}}
 - **`{{author_guidance}}`** is an optional flag passed via CLI (e.g. `publish my-note --guidance "keep the opening anecdote as-is"`). When present, it takes priority over the prompt's general restructuring rules.
 - **`{{tags}}`** are pulled from the Obsidian note's YAML frontmatter if present, otherwise left empty for the AI to infer.
 - **`{{model}}`** is auto-populated by the pipeline with the Claude model used (e.g. `claude-sonnet-4-20250514`). Stored in front matter and displayed in the transparency footer.
-- **`{{user_prompt_verbatim}}`** is the full user prompt (with variables resolved) appended verbatim at the bottom of every published post for transparency.
+- The transparency footer (model + verbatim user prompt as a blockquote) is appended by the pipeline *after* Claude returns its draft — Claude itself never sees or writes the footer. This avoids self-referential prompt nesting.
 - The `<notes>` block is shown to the author during the review step but stripped before publishing.
 - This prompt is invoked via `claude -p` (Claude Code CLI), not the API directly. No API key needed.

@@ -67,6 +67,9 @@ def main() -> int:
 
         try:
             parsed = formatter.parse_response(raw_response)
+            parsed["post"] = _append_transparency_footer(
+                parsed["post"], user_prompt, config["model"]
+            )
         except formatter.ResponseParseError as exc:
             print(f"\nError: {exc}", file=sys.stderr)
             print("\n--- raw response ---", file=sys.stderr)
@@ -245,9 +248,6 @@ def _build_user_prompt(
         )
         body = f"{body}\n\n{appended}"
 
-    # Substitute {{user_prompt_verbatim}} last, using the now-resolved body
-    body = body.replace("{{user_prompt_verbatim}}", body)
-
     return body
 
 
@@ -347,6 +347,19 @@ def _claude_supports_system_prompt(claude_path: str) -> bool:
     except (subprocess.SubprocessError, OSError):
         _SYSTEM_PROMPT_SUPPORT_CACHE = False
     return _SYSTEM_PROMPT_SUPPORT_CACHE
+
+
+def _append_transparency_footer(post: str, user_prompt: str, model: str) -> str:
+    quoted = "\n".join(
+        f"> {line}" if line else ">" for line in user_prompt.splitlines()
+    )
+    footer = (
+        "\n\n---\n\n"
+        f"*This post was rewritten from a note using {model}. "
+        "The prompt used:*\n\n"
+        f"{quoted}\n"
+    )
+    return post.rstrip() + footer
 
 
 def _print_draft(frontmatter: dict, post: str, notes: str) -> None:
