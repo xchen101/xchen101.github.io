@@ -115,6 +115,28 @@ img { max-width: 100%; height: auto; display: block; }
   margin: 2em 0;
   filter: saturate(0.8);
 }
+.post-body .transparency-footer {
+  margin-top: 4em;
+  padding-top: 1.5em;
+  border-top: 1px solid #2A2A2E;
+  font-size: 14px;
+  color: #6B6B6B;
+}
+.post-body .transparency-label em {
+  color: #6B6B6B;
+}
+.post-body .transparency-prompt {
+  font-family: inherit;
+  font-size: 14px;
+  color: #6B6B6B;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0.5em 0 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-style: italic;
+}
 
 /* Page Content */
 .page-content {

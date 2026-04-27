@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import html
 import os
 import re
 import shutil
@@ -56,6 +57,8 @@ def main() -> int:
     guidance = args.guidance
 
     while True:
+        edited = False
+
         user_prompt = _build_user_prompt(
             user_template,
             extracted=extracted,
@@ -67,9 +70,6 @@ def main() -> int:
 
         try:
             parsed = formatter.parse_response(raw_response)
-            parsed["post"] = _append_transparency_footer(
-                parsed["post"], user_prompt, config["model"]
-            )
         except formatter.ResponseParseError as exc:
             print(f"\nError: {exc}", file=sys.stderr)
             print("\n--- raw response ---", file=sys.stderr)
@@ -86,8 +86,11 @@ def main() -> int:
                 feedback_log.append(feedback)
             continue
 
-        post_for_review = parsed["post"]
-        _print_draft(parsed["frontmatter"], post_for_review, parsed["notes"])
+        post_body = parsed["post"]
+        display = _append_transparency_footer(
+            post_body, user_prompt, config["model"], edited
+        )
+        _print_draft(parsed["frontmatter"], display, parsed["notes"])
 
         choice = _prompt_choice(
             "[y] publish  [e] edit in $EDITOR  [r] retry with feedback  [q] quit",
@@ -106,12 +109,16 @@ def main() -> int:
             continue
 
         if choice == "e":
-            edited = _edit_in_editor(post_for_review)
-            parsed["post"] = edited
+            post_body = _edit_in_editor(post_body)
+            edited = True
+
+        final_post = _append_transparency_footer(
+            post_body, user_prompt, config["model"], edited
+        )
 
         out_path = formatter.publish(
             parsed["frontmatter"],
-            parsed["post"],
+            final_post,
             args.note_name,
             config,
         )
@@ -349,15 +356,22 @@ def _claude_supports_system_prompt(claude_path: str) -> bool:
     return _SYSTEM_PROMPT_SUPPORT_CACHE
 
 
-def _append_transparency_footer(post: str, user_prompt: str, model: str) -> str:
-    quoted = "\n".join(
-        f"> {line}" if line else ">" for line in user_prompt.splitlines()
+def _append_transparency_footer(
+    post: str, user_prompt: str, model: str, edited: bool
+) -> str:
+    edit_clause = ", with manual edits by the author" if edited else ""
+    label = (
+        f"<em>This post was rewritten from a note using {html.escape(model)}"
+        f"{edit_clause}. The prompt used:</em>"
     )
+    escaped_prompt = html.escape(user_prompt)
     footer = (
-        "\n\n---\n\n"
-        f"*This post was rewritten from a note using {model}. "
-        "The prompt used:*\n\n"
-        f"{quoted}\n"
+        '\n\n<div class="transparency-footer" markdown="0">\n'
+        f'<p class="transparency-label">{label}</p>\n'
+        '<pre class="transparency-prompt">\n'
+        f"{escaped_prompt}\n"
+        "</pre>\n"
+        "</div>\n"
     )
     return post.rstrip() + footer
 

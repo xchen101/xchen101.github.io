@@ -5,6 +5,7 @@ from __future__ import annotations
 import re
 import subprocess
 import sys
+from datetime import date
 from pathlib import Path
 
 
@@ -58,11 +59,12 @@ def _parse_frontmatter_block(text: str) -> dict:
 
 
 def publish(frontmatter: dict, post: str, note_name: str, config: dict) -> Path:
-    date = frontmatter.get("date", "").strip()
-    if not date:
-        raise ValueError("Frontmatter is missing a date")
+    # Publish date overrides whatever Claude returned: posts are dated by
+    # when they go live, not by the original note's creation date.
+    frontmatter["date"] = date.today().isoformat()
+    post_date = frontmatter["date"]
 
-    filename = f"{date}-{note_name}.md"
+    filename = f"{post_date}-{note_name}.md"
     posts_dir = REPO_ROOT / "_posts"
     posts_dir.mkdir(exist_ok=True)
     out_path = posts_dir / filename
@@ -78,7 +80,7 @@ def publish(frontmatter: dict, post: str, note_name: str, config: dict) -> Path:
 
 def _build_post_file(frontmatter: dict, post: str) -> str:
     title = frontmatter.get("title", "").strip()
-    date = frontmatter.get("date", "").strip()
+    post_date = frontmatter.get("date", "").strip()
     tags = frontmatter.get("tags", "").strip()
     description = frontmatter.get("description", "").strip()
     model = frontmatter.get("model", "").strip()
@@ -87,7 +89,7 @@ def _build_post_file(frontmatter: dict, post: str) -> str:
         "---",
         "layout: post",
         f"title: {_yaml_quote(title)}",
-        f"date: {date}",
+        f"date: {post_date}",
         f"tags: [{tags}]",
         f"description: {_yaml_quote(description)}",
         f"model: {_yaml_quote(model)}",
