@@ -1,0 +1,3 @@
+vault_path: ~/Documents/sync'd/Notes   # absolute or ~-relative path
+publish_folder: publish                   # subfolder inside vault where publishable notes live
+model: claude-sonnet-4-20250514           # model string for transparency footer

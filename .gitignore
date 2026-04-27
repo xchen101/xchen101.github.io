@@ -1,0 +1,19 @@
+# Local planning notes (kept out of the repo)
+publish-build-plan.md
+
+# Personal Claude Code permissions
+.claude/settings.local.json
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+
+# Jekyll build output
+_site/
+.jekyll-cache/
+.jekyll-metadata
