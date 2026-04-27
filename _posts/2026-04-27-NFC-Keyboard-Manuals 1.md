@@ -5,6 +5,7 @@ date: 2026-04-27
 tags: [keyboards, nfc, organization, mechanical-keyboards]
 description: "I solved the problem of forgetting key combos across 8 mechanical keyboards with a simple NFC tag solution."
 model: "claude-sonnet-4-20250514"
+image: /img/20260220_100119.jpg
 ---
 
 I have eight mechanical keyboards. This sounds excessive until you consider that each serves a different purpose: a 40% for travel, a 60% for gaming, a TKL for work, a full-size for data entry, and various others for specific layouts or just because they caught my eye. Each one has custom keymaps, different remapping software, and unique key combinations for everything from layer toggles to RGB control.

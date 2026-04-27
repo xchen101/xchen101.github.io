@@ -5,9 +5,9 @@ date: 2026-04-27
 tags: [ubuntu, hardware, repurposing, openclaw]
 description: "How a failed media center project became my OpenClaw AI assistant host."
 model: "claude-sonnet-4-20250514"
+image: /img/photo_2026-04-27_18-12-57.jpg
 ---
 
-# MacBook Pro Ubuntu Setup - K-2 Origin Story
 
 The old MacBook Pro I had since 2014 has been sitting around collecting dust. macOS was getting sluggish and I figured Ubuntu might give it a second life. The install went smoothly enough — only had to do it twice - Ubuntu’s hardware support has come a long way.
 
