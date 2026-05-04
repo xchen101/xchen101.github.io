@@ -86,7 +86,7 @@ image: /img/optional-image.jpg
 ```
 
 ### Projects
-Add entry to `_data/projects.yml` or create files in `_projects/` collection.
+Add an entry to `_data/projects.yml`. Each entry renders as a repo card on the landing page (`name`, `owner`, `description`, `language`, `language_color`, `url`).
 
 ## License
 
