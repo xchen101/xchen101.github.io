@@ -36,10 +36,5 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-collections:
-  projects:
-    output: true
-    permalink: /projects/:name/
-
 exclude:
   - source/

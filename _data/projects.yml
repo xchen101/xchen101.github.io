@@ -2,6 +2,13 @@
 # assets/js/main.js may enhance these with live GitHub stats (stars, last updated)
 # by calling api.github.com/repos/:owner/:repo for each entry.
 
+- name: "tg-companion"
+  owner: "xchen101"
+  description: "A Telegram bot that wraps claude -p subprocess calls for replies — runs on local hardware against a Max subscription instead of the Anthropic API."
+  language: "Python"
+  language_color: "#3572A5"
+  url: "https://github.com/xchen101/tg-companion"
+
 - name: "the-turing-way"
   owner: "the-turing-way"
   description: "A community-led, open-source guide to reproducible, ethical, collaborative, and inclusive data science. Contributor and reviewer."

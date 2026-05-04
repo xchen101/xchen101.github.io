@@ -21,17 +21,16 @@ No Gemfile exists — the site relies on GitHub Pages' bundled Jekyll and minima
 ## Architecture
 
 - **Theme**: Declares `minima` in `_config.yml` but fully overrides it with custom layouts and CSS
-- **Layouts** (`_layouts/`): `default.html` (base with nav/footer) → `home.html`, `post.html`, `project.html`, `page.html`
-- **No `_includes/` directory** — all components are inlined in layout files
+- **Layouts** (`_layouts/`): `default.html` (base with nav/footer) → `landing.html` (single-page home), `post.html`, `page.html`
+- **Includes** (`_includes/`): landing-page sections — `hero.html`, `recent-posts.html`, `projects.html`, `experience.html`, `education.html`, `publications.html`, `community.html`, `now.html`, `footer.html`, `social-icons.html`
 - **Single CSS file**: `assets/css/style.css` — no SCSS, no preprocessor
 - **No JavaScript** anywhere in the site
-- **Collections**: `_projects` collection configured in `_config.yml` with `output: true`
 
 ## Content
 
 - **Posts**: `_posts/` — standard Jekyll naming (`YYYY-MM-DD-title.md`), frontmatter includes `layout`, `title`, `date`, optional `image`
-- **Projects**: `_projects/` — frontmatter includes `layout`, `title`, `category`, `tags[]`, `order` (controls grid display order)
-- **Pages**: `index.md` (home), `about.md`, `blog.md` (archive), `projects.md` (portfolio grid)
+- **Pages**: `index.md` (single-page landing) and `blog.md` (archive at `/blog/`)
+- **Data** (`_data/`): landing-page sections are populated from YAML — `projects.yml` (repo cards), `publications.yml`, `now.yml`. Edit these to change site content; do not look for `_projects/` collection (removed).
 - **Images**: `/img/` — high-quality JPGs used in posts, hero, and about section
 
 ## Design System
