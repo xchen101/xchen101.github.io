@@ -49,13 +49,23 @@ author:
 
 `description` is the SEO meta line (was: "Project Lead at DataCite — open science infrastructure, persistent identifiers, and community engagement."). `author.role` renders in hero eyebrow via `{{ site.author.role }}` (was: "Project Lead, DataCite"). `author.location` is already "Edinburgh, UK" and does not change — Munich only exists in the experience timeline and gets removed there. Other `author.*` keys (`name`, `email`) are unchanged.
 
+**Eyebrow length fallback**: the new role string is 47 characters. If it does not fit one line on desktop (or wraps awkwardly), break to two lines explicitly — either by inserting a `<br>` mid-string (requires the include to render `author.role` as raw HTML rather than escaped text), or by hardcoding the two-line structure directly in `_includes/hero.html` and removing the dependency on `site.author.role`. The user's preference is two lines over an awkward one-line wrap.
+
 ### File 2 — `_includes/hero.html`
 
 **Replace the bio paragraph** (currently lines 9–11) with:
 
-> Co-founder of **Semantify**, an open science consulting studio based in Edinburgh and launching October 2026 — after a decade inside the field at DataCite, CERN, and the wider open science community. I architect open research practical implementation across the full research project lifecycle, with equal care for domain specificity and metadata interoperability. Through June 2026, wrapping up the [FAIR Workflows project](https://doi.org/10.54224/20568) at DataCite.
+> Co-founder of **[Semantify](https://semantify.co/)** — after a decade inside the field at DataCite, CERN, and the wider open science community. I architect open research practical implementation across the full research project lifecycle, with equal care for domain specificity and metadata interoperability. Through June 2026, wrapping up the [FAIR Workflows project](https://doi.org/10.54224/20568) at DataCite.
 
-Markdown-style emphasis (`**Semantify**`) and the link must render as HTML in the include — write as `<strong>Semantify</strong>` and `<a href="https://doi.org/10.54224/20568">FAIR Workflows project</a>`.
+Two links in the bio: "Semantify" → `https://semantify.co/`, "FAIR Workflows project" → `https://doi.org/10.54224/20568`. The bold styling on Semantify is preserved. Bio writes as HTML in the include:
+
+```html
+<p class="hero-bio">
+  Co-founder of <strong><a href="https://semantify.co/">Semantify</a></strong> — after a decade inside the field at DataCite, CERN, and the wider open science community. I architect open research practical implementation across the full research project lifecycle, with equal care for domain specificity and metadata interoperability. Through June 2026, wrapping up the <a href="https://doi.org/10.54224/20568">FAIR Workflows project</a> at DataCite.
+</p>
+```
+
+Note: the appositive describing Semantify ("an open science consulting studio based in Edinburgh and launching October 2026") was removed from the bio at user's request. The studio's identity and timing live in `_config.yml description` (SEO meta) and on `semantify.co` itself; not duplicated in hero bio.
 
 **Replace the credential pills** (currently lines 14–19) with:
 
@@ -81,9 +91,12 @@ The three `<dl class="timeline-highlights">` blocks (Grant leadership / Communit
 
 ### Phase 1 ship plan
 
-- All three file changes committed as a single commit, pushed to `master`.
-- GitHub Pages auto-builds.
-- Spot-check live site for: eyebrow text fits one line, bio renders with bold + link, pills are 4 items, DataCite date shows `Oct 2021 — Jun 2026`, no "Munich" appears anywhere.
+1. Make the three file edits.
+2. **User runs `jekyll serve` locally and reviews before push.** Spot-check items: hero eyebrow displays the composite role (one line if it fits, two if it doesn't — both acceptable), bio renders bold + both links work, pills show the four-item list, DataCite timeline shows `Oct 2021 — Jun 2026` with location `Remote · Edinburgh, UK` (no Munich anywhere on page).
+3. If anything is off, iterate locally.
+4. Once the user is satisfied, commit all three file changes as a single commit, push to `master`. GitHub Pages auto-builds.
+
+If Ruby/Jekyll is not currently installed on the user's machine (the prior memory snapshot suggested it wasn't), step 2 requires that to be set up first — implementation plan should account for that as a possible blocker, but the spec assumes the user can preview.
 
 ## Phase 2 — after Semantify content is ready (roughly Oct 2026)
 
