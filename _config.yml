@@ -38,3 +38,9 @@ plugins:
 
 exclude:
   - source/
+  - docs/
+  - Gemfile
+  - Gemfile.lock
+  - personal-website-design-brief.md
+  - README.md
+  - CLAUDE.md
