@@ -55,13 +55,13 @@ author:
 
 **Replace the bio paragraph** (currently lines 9–11) with:
 
-> Co-founder of **[Semantify](https://semantify.co/)** — after a decade inside the field at DataCite, CERN, and the wider open science community. I architect open research practical implementation across the full research project lifecycle, with equal care for domain specificity and metadata interoperability. Through June 2026, wrapping up the [FAIR Workflows project](https://doi.org/10.54224/20568) at DataCite.
+> Co-founder of **[Semantify](https://semantify.co/)** — after a decade in open research infrastructure at DataCite, CERN, and the wider open science community. I help architect and implement practical open sharing workflows across the full research project lifecycle, with equal care for domain specificity and metadata interoperability. Through June 2026, wrapping up the [FAIR Workflows project](https://doi.org/10.54224/20568) at DataCite.
 
 Two links in the bio: "Semantify" → `https://semantify.co/`, "FAIR Workflows project" → `https://doi.org/10.54224/20568`. The bold styling on Semantify is preserved. Bio writes as HTML in the include:
 
 ```html
 <p class="hero-bio">
-  Co-founder of <strong><a href="https://semantify.co/">Semantify</a></strong> — after a decade inside the field at DataCite, CERN, and the wider open science community. I architect open research practical implementation across the full research project lifecycle, with equal care for domain specificity and metadata interoperability. Through June 2026, wrapping up the <a href="https://doi.org/10.54224/20568">FAIR Workflows project</a> at DataCite.
+  Co-founder of <strong><a href="https://semantify.co/">Semantify</a></strong> — after a decade in open research infrastructure at DataCite, CERN, and the wider open science community. I help architect and implement practical open sharing workflows across the full research project lifecycle, with equal care for domain specificity and metadata interoperability. Through June 2026, wrapping up the <a href="https://doi.org/10.54224/20568">FAIR Workflows project</a> at DataCite.
 </p>
 ```
 
