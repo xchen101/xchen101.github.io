@@ -1042,7 +1042,7 @@ img { max-width: 100%; height: auto; display: block; }
   justify-content: space-between;
   gap: 80px;
 }
-.blog-header-text { display: flex; flex-direction: column; gap: 28px; flex: 1; max-width: 780px; }
+.blog-header-text { display: flex; flex-direction: column; flex: 1; max-width: 780px; }
 .blog-title {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 84px;
@@ -1050,14 +1050,6 @@ img { max-width: 100%; height: auto; display: block; }
   letter-spacing: -0.03em;
   line-height: 0.96;
   color: #F0F0F0;
-}
-.blog-subtitle {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.65;
-  color: #C8C8C8;
-  max-width: 620px;
 }
 .blog-count { display: flex; flex-direction: column; gap: 6px; align-items: flex-end; padding-bottom: 14px; }
 .blog-count-num {

@@ -16,7 +16,6 @@ permalink: /blog/
     <div class="blog-header-body">
       <div class="blog-header-text">
         <h1 class="blog-title">Field notes</h1>
-        <p class="blog-subtitle">Short essays on photography, the city, and the quiet rhythms of working in open science. Written irregularly, usually after a long walk.</p>
       </div>
       <div class="blog-count">
         <div class="blog-count-num">{{ site.posts | size | prepend: '0' | slice: -2, 2 }}</div>
