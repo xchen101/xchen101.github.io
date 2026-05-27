@@ -4,6 +4,7 @@ title: "The Illiterate of the Future"
 date: 2026-05-04
 tags: [ai, photography, benjamin, philosophy, marxism]
 description: "Reading Walter Benjamin's A Short History of Photography in the age of AI — the parallels are uncanny, but the contrasts are more illuminating."
+lang: en
 model: "claude-opus-4-7"
 image: /img/20260429_170545.jpg
 ---

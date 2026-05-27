@@ -4,6 +4,7 @@ title: "MacBook Pro Ubuntu Setup - K-2 Origin Story"
 date: 2026-04-27
 tags: [ubuntu, hardware, repurposing, openclaw]
 description: "How a failed media center project became my OpenClaw AI assistant host."
+lang: en
 model: "claude-sonnet-4-20250514"
 image: /img/photo_2026-04-27_18-12-57.jpg
 ---

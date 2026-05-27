@@ -4,6 +4,7 @@ title: "搭 Cas 的一天：Telegram bot + Claude Code Max 订阅"
 date: 2026-05-04
 tags: [telegram, claude-code, openclaw, ubuntu, systemd]
 description: "爱丁堡国际劳动节假，把 tg-companion 搭了起来——一个住在自己 MBP 上的 Telegram bot，每条回复由 claude -p 子进程生成，吃 Max 订阅而不是 API。"
+lang: zh
 model: "claude-opus-4-7"
 image: /img/DSC_8740.JPG
 ---
