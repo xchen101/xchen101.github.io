@@ -8,7 +8,7 @@ lang: en
 image: /img/container-that-refuses-to-dissolve.jpg
 ---
 
-A recent piece on the Scholarly Kitchen (sponsored by Silverchair, disclosure duly noted) makes a case that publishers urgently need to build Model Context Protocol (MCP) endpoints — lest the defaults for how AI agents access scholarly content be "set without them." The argument isn't wrong in its premises: MCP downloads went from 100,000 to 97 million monthly in a year, and most publishers haven't even heard of it. If you don't build the infrastructure, someone else will.
+A recent piece on the Scholarly Kitchen makes a case that publishers urgently need to build Model Context Protocol (MCP) endpoints — lest the defaults for how AI agents access scholarly content be "set without them." The argument isn't wrong in its premises: MCP downloads went from 100,000 to 97 million monthly in a year, and most publishers haven't even heard of it. If you don't build the infrastructure, someone else will.
 
 But the article frames this as a straightforward imperative: publishers should build MCP endpoints because they are the natural custodians of "the values of scholarly publishing" — attribution, version control, retraction handling, and entitlement management.
 
