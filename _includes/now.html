@@ -41,7 +41,7 @@
     <div class="now-body">
       <div class="now-service"><span class="now-dot" style="background:{{ watching.accent | default: '#7A95B5' }};"></span>{{ watching.service }} · {{ watching.label }}</div>
       <h3 class="now-title">{{ watching.title }}</h3>
-      {% if watching.director %}<div class="now-meta">{{ watching.director }}</div>{% endif %}
+      {% if watching.year %}<div class="now-meta">{{ watching.year }}</div>{% endif %}
       {% if watching.rating %}
       <div class="now-rating">
         {% assign full_stars = watching.rating | floor %}
