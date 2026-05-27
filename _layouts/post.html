@@ -4,8 +4,30 @@ layout: default
 
 <article class="post-full">
   <header class="post-header">
-    <span class="post-date">{{ page.date | date: "%B %-d, %Y" }}</span>
+    <div class="post-meta-row">
+      <span class="post-date">{{ page.date | date: "%B %-d, %Y" }}</span>
+      {% if page.lang %}
+      <span class="post-lang-badge {% if page.lang == 'zh' %}post-lang-zh{% else %}post-lang-en{% endif %}">
+        {% if page.lang == 'zh' %}中文{% else %}EN{% endif %}
+      </span>
+      {% endif %}
+    </div>
     <h1 class="post-full-title">{{ page.title }}</h1>
+    {% if page.lang and page.translation %}
+    <div class="post-translation-link">
+      {% assign trans_posts = site.posts | where_exp: "p", "p.slug == page.translation" %}
+      {% assign trans_post = trans_posts | first %}
+      {% if trans_post %}
+      <a href="{{ trans_post.url | relative_url }}">
+        {% if page.lang == 'zh' %}→ English version{% else %}→ 中文版{% endif %}
+      </a>
+      {% else %}
+      <span class="post-translation-missing">
+        {% if page.lang == 'zh' %}🏗️ Translation coming soon{% else %}🏗️ 翻译中{% endif %}
+      </span>
+      {% endif %}
+    </div>
+    {% endif %}
   </header>
   {% if page.image %}
   <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="post-hero-img" loading="lazy">

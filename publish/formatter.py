@@ -84,6 +84,8 @@ def _build_post_file(frontmatter: dict, post: str) -> str:
     tags = frontmatter.get("tags", "").strip()
     description = frontmatter.get("description", "").strip()
     model = frontmatter.get("model", "").strip()
+    lang = frontmatter.get("lang", "").strip()
+    translation = frontmatter.get("translation", "").strip()
 
     lines = [
         "---",
@@ -93,10 +95,12 @@ def _build_post_file(frontmatter: dict, post: str) -> str:
         f"tags: [{tags}]",
         f"description: {_yaml_quote(description)}",
         f"model: {_yaml_quote(model)}",
-        "---",
-        "",
-        post.rstrip() + "\n",
     ]
+    if lang:
+        lines.append(f"lang: {lang}")
+    if translation:
+        lines.append(f"translation: {translation}")
+    lines += ["---", "", post.rstrip() + "\n"]
     return "\n".join(lines)
 
 

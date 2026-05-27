@@ -44,7 +44,7 @@ permalink: /blog/
           <div class="blog-post-read">{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} min read</div>
         </div>
         <div class="blog-post-main">
-          <h2 class="blog-post-title">{{ post.title }}</h2>
+          <h2 class="blog-post-title">{{ post.title }}{% if post.lang %}<span class="blog-post-lang">{% if post.lang == 'zh' %}中文{% else %}EN{% endif %}</span>{% endif %}</h2>
           <p class="blog-post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
           {% if post.tags %}
           <div class="blog-post-tags">

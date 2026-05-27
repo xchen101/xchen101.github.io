@@ -4,6 +4,7 @@ title: "NFC-Tagged Keyboards: Linking Hardware to Manuals"
 date: 2026-04-27
 tags: [keyboards, nfc, organization, mechanical-keyboards]
 description: "I solved the problem of forgetting key combos across 8 mechanical keyboards with a simple NFC tag solution."
+lang: en
 model: "claude-sonnet-4-20250514"
 image: /img/20260220_100119.jpg
 ---

@@ -73,13 +73,15 @@ Here is the note to rewrite as a blog post.
 
 Rewrite this into a blog post. Return your response in this exact format:
 
-<frontmatter>
-title: (a clean, engaging title — can refine the original or keep it)
-date: {{date}}
-tags: (a refined tag list, lowercase, comma-separated, 2-5 tags)
-description: (one sentence, under 160 characters, for meta/preview)
-model: {{model}}
-</frontmatter>
+|<frontmatter>
+|title: (a clean, engaging title — can refine the original or keep it)
+|date: {{date}}
+|tags: (a refined tag list, lowercase, comma-separated, 2-5 tags)
+|description: (one sentence, under 160 characters, for meta/preview)
+|lang: (language of the post: "en" or "zh")
+|model: {{model}}
+|translation: (optional — slug of the counterpart post if this is a translation of an existing post, e.g. "kindle-monitor-dual-agent")
+|</frontmatter>
 
 <post>
 (the rewritten blog post in markdown)
