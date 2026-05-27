@@ -79,9 +79,9 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Post Full */
 .post-full {
-  max-width: 720px;
+  max-width: 880px;
   margin: 0 auto;
-  padding: 80px 80px;
+  padding: 80px 64px;
   width: 100%;
 }
 .post-header {
@@ -163,7 +163,7 @@ img { max-width: 100%; height: auto; display: block; }
   filter: saturate(0.8);
 }
 .post-body {
-  font-size: 17px;
+  font-size: 19px;
   line-height: 1.8;
   color: #B0B0B0;
 }
