@@ -35,8 +35,6 @@ On the one hand that is exciting; it means more thinking gets out into the world
 
 ### Some Even Meta-er Points, If That's Allowed
 
-<!-- TODO: Add screenshot here once synced from phone -->
-<!-- Screenshot 2026-05-28 143413.png — shows the iterative editing process between human and AI -->
 ![Screenshot showing the collaborative editing process between Xiaoli and K-2](/img/on-creating-editing-process.png)
 
 This was originally also a note rewritten by my bot based on a much shorter note I gave it. But upon reviewing what it spit out I found a lot of misrepresented points so I worked with it to edit the whole piece, and with that, it can learn more about how I write, and distil that into a skill. I know a lot of people would be horrified with this idea, but I do think this kneejerk reaction, echoing the authorship point made above, really comes from an unhealthy relationship with the concept of ownership instilled by an ultra capitalistic society but we don't have to go there. (Reiterating my point: AI is a major mean of production and a true leftist would no doubt seize it. On all levels. Ok that's it.)
@@ -54,7 +52,7 @@ This was originally also a note rewritten by my bot based on a much shorter note
 
 <p><strong>Original prompts (messages from Xiaoli to K-2, verbatim):</strong></p>
 
-<pre>
+<pre class="transparency-prompt">
 [5/28/2026 6:25 AM] Xiaoli:
 关于这篇文章的思考
 1 ai协助下的双语思考和双语产出：在事实上减少了很多摩擦力--pin down脑内零碎想法的摩擦力，互相翻译的摩擦力，落在笔头上的摩擦力，更重要的是第一时间有对象可以分享讨论的摩擦力（这些想法不会因为没人一起聊而被轻易抛弃）；在思考的过程中丰富论点--ai会延展和挑战零碎的思考，让我对这些新的延伸进行新的思考；如果没有ai协助零碎的想法大概率只会stay零碎的想法，而不是组织完整的表达--但这是好事还是坏事？
