@@ -40,7 +40,6 @@ On the one hand that is exciting; it means more thinking gets out into the world
 This was originally also a note rewritten by my bot based on a much shorter note I gave it. But upon reviewing what it spit out I found a lot of misrepresented points so I worked with it to edit the whole piece, and with that, it can learn more about how I write, and distil that into a skill. I know a lot of people would be horrified with this idea, but I do think this kneejerk reaction, echoing the authorship point made above, really comes from an unhealthy relationship with the concept of ownership instilled by an ultra capitalistic society but we don't have to go there. (Reiterating my point: AI is a major mean of production and a true leftist would no doubt seize it. On all levels. Ok that's it.)
 
 
-<hr>
 
 <div class="transparency-footer" markdown="0">
 
