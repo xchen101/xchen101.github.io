@@ -13,7 +13,7 @@
 <div class="now-grid">
   {% if reading %}
   <a class="now-card" href="{{ reading.profile_url }}" target="_blank" rel="noopener">
-    <div class="now-media now-media-portrait" style="background:linear-gradient(135deg,#5C4A3A,#2A221B);">
+    <div class="now-media now-media-portrait" style="background:{% if reading.image %}linear-gradient(135deg,rgba(92,74,58,0.55),rgba(42,34,27,0.75)),url('{{ reading.image }}') center/cover{% else %}linear-gradient(135deg,#5C4A3A,#2A221B){% endif %};">
       <span class="now-media-label">{{ reading.title }}</span>
     </div>
     <div class="now-body">
@@ -35,7 +35,7 @@
 
   {% if watching %}
   <a class="now-card" href="{{ watching.profile_url }}" target="_blank" rel="noopener">
-    <div class="now-media now-media-portrait" style="background:linear-gradient(135deg,#3A4A5C,#151E2A);">
+    <div class="now-media now-media-portrait" style="background:{% if watching.image %}linear-gradient(135deg,rgba(58,74,92,0.55),rgba(21,30,42,0.75)),url('{{ watching.image }}') center/cover{% else %}linear-gradient(135deg,#3A4A5C,#151E2A){% endif %};">
       <span class="now-media-label">{{ watching.title }}</span>
     </div>
     <div class="now-body">
@@ -57,7 +57,7 @@
 
   {% if listening %}
   <a class="now-card" href="{{ listening.profile_url }}" target="_blank" rel="noopener">
-    <div class="now-media now-media-square" style="background:linear-gradient(135deg,#4A3A5C,#1F1528);">
+    <div class="now-media now-media-square" style="background:{% if listening.image %}linear-gradient(135deg,rgba(74,58,92,0.55),rgba(31,21,40,0.75)),url('{{ listening.image }}') center/cover{% else %}linear-gradient(135deg,#4A3A5C,#1F1528){% endif %};">
       <span class="now-play-glyph"></span>
     </div>
     <div class="now-body">
