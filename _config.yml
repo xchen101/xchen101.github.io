@@ -39,6 +39,7 @@ plugins:
 exclude:
   - source/
   - docs/
+  - publish/
   - Gemfile
   - Gemfile.lock
   - personal-website-design-brief.md
