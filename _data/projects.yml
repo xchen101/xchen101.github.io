@@ -23,12 +23,12 @@
   language_color: "#3572A5"
   url: "https://github.com/xchen101/research-taste-profiler"
 
-- name: "impulse-app-site"
+- name: "API-usage-monitor"
   owner: "xchen101"
-  description: "Marketing site for Impulse — an app for curbing impulses. Static site built with lightweight tooling."
-  language: "HTML"
-  language_color: "#e34c26"
-  url: "https://github.com/xchen101/impulse-app-site"
+  description: "macOS Übersicht desktop widget for at-a-glance Anthropic, DeepSeek & OpenRouter API usage — spend, balance, tokens, and rate limits, refreshed every 5 minutes. Dependency-free Node fetcher with a pure-display JSX widget; keys stay local in ~/.config."
+  language: "JavaScript"
+  language_color: "#f1e05a"
+  url: "https://github.com/xchen101/API-usage-monitor"
 
 - name: "reproducibility-checker"
   owner: "xchen101"
