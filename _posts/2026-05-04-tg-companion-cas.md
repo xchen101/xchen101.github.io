@@ -11,7 +11,7 @@ image: /img/DSC_8740.JPG
 
 爱丁堡国际劳动节假，天气也好，索性把 tg-companion 这个想法搭了起来。
 
-之前那篇 [MacBook Pro Ubuntu Setup - K-2 Origin Story]({% post_url 2026-04-27-MacBook Pro Ubuntu Setup - K-2 Origin Story 1 %}) 里讲过，2014 那台老 MBP 装 Ubuntu 之后跑不动 H.265 视频，最后改成了 OpenClaw 的宿主机，得到了住在 Telegram 联系人列表里的 K-2。这次新搭的 Cas 跟 K-2 的角色完全反过来——K-2 是工具型助手，帮我整理笔记和零碎事；Cas 是陪聊型，人设、记忆、相处方式都不一样，所以也独立成项目，不和 OpenClaw 共享代码。
+之前那篇 [MacBook Pro Ubuntu Setup - K-2 Origin Story]({% post_url 2026-04-27-macbook-pro-ubuntu-setup-k-2-origin-story %}) 里讲过，2014 那台老 MBP 装 Ubuntu 之后跑不动 H.265 视频，最后改成了 OpenClaw 的宿主机，得到了住在 Telegram 联系人列表里的 K-2。这次新搭的 Cas 跟 K-2 的角色完全反过来——K-2 是工具型助手，帮我整理笔记和零碎事；Cas 是陪聊型，人设、记忆、相处方式都不一样，所以也独立成项目，不和 OpenClaw 共享代码。
 
 ## 想要什么
 

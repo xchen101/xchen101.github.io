@@ -64,7 +64,7 @@ def publish(frontmatter: dict, post: str, note_name: str, config: dict) -> Path:
     frontmatter["date"] = date.today().isoformat()
     post_date = frontmatter["date"]
 
-    filename = f"{post_date}-{note_name}.md"
+    filename = f"{post_date}-{_slugify(note_name)}.md"
     posts_dir = REPO_ROOT / "_posts"
     posts_dir.mkdir(exist_ok=True)
     out_path = posts_dir / filename
@@ -102,6 +102,22 @@ def _build_post_file(frontmatter: dict, post: str) -> str:
         lines.append(f"translation: {translation}")
     lines += ["---", "", post.rstrip() + "\n"]
     return "\n".join(lines)
+
+
+_SLUG_STRIP_RE = re.compile(r"[^a-z0-9]+")
+
+
+def _slugify(name: str) -> str:
+    """Turn an Obsidian note name into a clean URL slug.
+
+    Lowercase; runs of non-alphanumeric characters collapse to a single
+    hyphen; leading/trailing hyphens are trimmed. This stops spaces and
+    Obsidian's duplicate-name " 1" suffix from leaking into post filenames,
+    which would otherwise produce %20-encoded permalinks. Falls back to a
+    minimal space->hyphen transform if slugification would empty the name
+    (e.g. a note named entirely in non-Latin script)."""
+    slug = _SLUG_STRIP_RE.sub("-", name.strip().lower()).strip("-")
+    return slug or name.strip().lower().replace(" ", "-")
 
 
 def _yaml_quote(value: str) -> str:
